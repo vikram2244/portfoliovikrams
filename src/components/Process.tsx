@@ -31,10 +31,6 @@ export const Process: React.FC = () => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-<<<<<<< HEAD
-=======
-      // Timeline vertical scroll line growth
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       if (lineProgressRef.current) {
         gsap.fromTo(
           lineProgressRef.current,
@@ -52,10 +48,6 @@ export const Process: React.FC = () => {
         );
       }
 
-<<<<<<< HEAD
-=======
-      // Step cards entrance
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       gsap.utils.toArray<HTMLElement>('.process-step-card-container').forEach((card) => {
         gsap.fromTo(
           card,
@@ -87,10 +79,6 @@ export const Process: React.FC = () => {
       <div className="absolute inset-0 technical-grid opacity-15 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 space-y-20">
-<<<<<<< HEAD
-=======
-        {/* Header */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-white/10 w-fit">
             <Sparkles className="w-3.5 h-3.5 text-champagne" />
@@ -103,22 +91,11 @@ export const Process: React.FC = () => {
             <span className="text-gradient-gold">BUILD.</span>
           </h2>
           <p className="font-space text-sm sm:text-base text-ivory-muted leading-relaxed pt-2">
-<<<<<<< HEAD
             A disciplined 5-stage lifecycle ensuring every product is architected for zero latency, robust data flow, and secure authentication.
           </p>
         </div>
 
         <div className="relative pl-6 md:pl-16 space-y-12">
-=======
-            A disciplined 5-stage lifecycle ensuring every product is architected for zero latency,
-            robust data flow, and pragmatic machine intelligence.
-          </p>
-        </div>
-
-        {/* Timeline with Glowing Line */}
-        <div className="relative pl-6 md:pl-16 space-y-12">
-          {/* Vertical progress line */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           <div className="absolute left-2 md:left-6 top-6 bottom-6 w-0.5 bg-white/10">
             <div
               ref={lineProgressRef}
@@ -133,19 +110,11 @@ export const Process: React.FC = () => {
                   onMouseEnter={() => soundManager.playHover()}
                   className="relative glass-panel glass-panel-hover p-8 md:p-12 rounded-3xl border border-white/10 group shadow-xl"
                 >
-<<<<<<< HEAD
-=======
-                  {/* Step Marker Badge */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div className="absolute -left-[31px] md:-left-[51px] top-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface border-2 border-champagne text-champagne shadow-gold-glow z-20 group-hover:scale-110 transition-transform">
                     <span className="font-mono text-[10px] font-bold">{stage.number}</span>
                   </div>
 
                   <div className="space-y-6">
-<<<<<<< HEAD
-=======
-                    {/* Title & Subtitle */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-5">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-2xl bg-surface border border-champagne/30 flex items-center justify-center shadow-gold-glow group-hover:border-champagne transition-colors">
@@ -166,18 +135,10 @@ export const Process: React.FC = () => {
                       </div>
                     </div>
 
-<<<<<<< HEAD
-=======
-                    {/* Description */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <p className="font-space text-xs sm:text-sm text-ivory-dim leading-relaxed">
                       {stage.details}
                     </p>
 
-<<<<<<< HEAD
-=======
-                    {/* Key Actions Checklist */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
                       {stage.blueprint.map((action, aIdx) => (
                         <div
@@ -199,8 +160,4 @@ export const Process: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be

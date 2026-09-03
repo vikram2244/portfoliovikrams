@@ -50,15 +50,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       }}
     >
       <div className="relative w-full max-w-4xl rounded-3xl border border-champagne/30 bg-[#0a0a0f] p-6 sm:p-8 md:p-10 shadow-2xl overflow-hidden my-auto space-y-6 max-h-[90vh] overflow-y-auto">
-<<<<<<< HEAD
         <div className="absolute top-0 right-0 w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none" />
 
-=======
-        {/* Glow accent */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none" />
-
-        {/* Modal Top Nav */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="flex items-start justify-between border-b border-white/10 pb-6">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
@@ -92,10 +85,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </button>
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Metric Badges */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         {project.metrics && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {project.metrics.map((m, idx) => (
@@ -114,19 +103,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
         )}
 
-<<<<<<< HEAD
-=======
-        {/* Navigation Tabs */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="flex flex-wrap gap-2 border-b border-white/10 pb-3">
           {[
             { id: 'architecture', label: 'System Overview', icon: Layers },
             { id: 'flow', label: 'Data Flow Pipeline', icon: GitBranch },
-<<<<<<< HEAD
             { id: 'ai', label: 'Security & Auth', icon: Cpu },
-=======
-            { id: 'ai', label: 'AI & Inference Engine', icon: Cpu },
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
             { id: 'tech', label: 'Tech Stack & Modules', icon: Activity },
           ].map((tab) => {
             const Icon = tab.icon;
@@ -150,10 +131,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           })}
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Tab Content Display */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-6 min-h-[220px]">
           {activeTab === 'architecture' && (
             <div className="space-y-4 animate-fade-in">
@@ -201,11 +178,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {activeTab === 'ai' && (
             <div className="space-y-3 animate-fade-in">
               <span className="font-mono text-[10px] text-champagne uppercase font-bold tracking-wider block">
-<<<<<<< HEAD
                 SECURITY & AUTHENTICATION
-=======
-                INTELLIGENT INTEGRATION ENGINES
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {project.architectureDetails.aiComponents.map((comp, idx) => (
@@ -243,10 +216,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           )}
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Modal Bottom Bar */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
           <div className="font-mono text-[10px] text-ivory-dim">
             PROJECT REF: <span className="text-white">{project.id.toUpperCase()}</span>
@@ -284,8 +253,4 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be

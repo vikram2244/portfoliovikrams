@@ -67,11 +67,7 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
         return {
           gradient: 'from-blue-950/30 via-surface to-background-deep',
           accent: 'text-sky-400',
-<<<<<<< HEAD
           icon: <Database className="w-10 h-10 text-sky-400" />,
-=======
-          icon: <Bot className="w-10 h-10 text-sky-400" />,
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           bgPattern: 'radial-gradient(circle at 75% 30%, rgba(56, 189, 248, 0.12), transparent 70%)',
         };
       case 2:
@@ -112,10 +108,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
       <div className="absolute inset-0 technical-grid-gold opacity-15 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 space-y-20">
-<<<<<<< HEAD
-=======
-        {/* Section Header */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-white/10 w-fit">
             <Sparkles className="w-3.5 h-3.5 text-champagne" />
@@ -128,19 +120,10 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
             <span className="text-gradient-gold">CASE STUDIES.</span>
           </h2>
           <p className="font-space text-sm sm:text-base text-ivory-muted leading-relaxed pt-2">
-<<<<<<< HEAD
             Each project represents a tangible convergence of clean architecture, relational integrity, and pragmatic Java development.
           </p>
         </div>
 
-=======
-            Each project represents a tangible convergence of clean architecture, relational integrity,
-            and pragmatic AI execution.
-          </p>
-        </div>
-
-        {/* Project List */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-24 md:space-y-36">
           {projects.map((project, idx) => {
             const theme = getThemeAccents(idx);
@@ -150,31 +133,17 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                 key={project.id}
                 className="cinematic-project-item relative min-h-[65vh] flex flex-col justify-center"
               >
-<<<<<<< HEAD
-=======
-                {/* Giant Watermark Number */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                 <div className="project-giant-number absolute -top-14 -left-6 md:-left-10 font-syncopate text-[15vw] font-bold text-white/[0.025] select-none pointer-events-none tracking-tighter">
                   {project.number}
                 </div>
 
-<<<<<<< HEAD
-=======
-                {/* Single, non-nested 3D TiltCard */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                 <TiltCard maxTilt={8} scale={1.01} className="w-full">
                   <div
                     className={`relative z-10 glass-panel glass-panel-hover p-7 md:p-12 rounded-3xl border border-white/10 bg-gradient-to-br ${theme.gradient} shadow-2xl overflow-hidden group`}
                     style={{ backgroundImage: theme.bgPattern }}
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-<<<<<<< HEAD
                       <div className="project-content-panel lg:col-span-7 space-y-6">
-=======
-                      {/* Left: Info & Metrics */}
-                      <div className="project-content-panel lg:col-span-7 space-y-6">
-                        {/* Meta Tags Row */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         <div className="flex flex-wrap items-center gap-2.5">
                           <span className="font-syncopate text-lg md:text-xl font-bold text-champagne">
                             {project.number}
@@ -201,10 +170,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                           ))}
                         </div>
 
-<<<<<<< HEAD
-=======
-                        {/* Title & Tagline */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         <div className="space-y-2">
                           <h3 className="font-syncopate text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight group-hover:text-champagne transition-colors">
                             {project.title}
@@ -214,18 +179,10 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                           </p>
                         </div>
 
-<<<<<<< HEAD
-=======
-                        {/* Description */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         <p className="font-space text-xs sm:text-sm text-ivory-dim leading-relaxed">
                           {project.description}
                         </p>
 
-<<<<<<< HEAD
-=======
-                        {/* Metrics Grid */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         {project.metrics && (
                           <div className="grid grid-cols-3 gap-3 pt-2">
                             {project.metrics.map((metric, mIdx) => (
@@ -245,10 +202,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                           </div>
                         )}
 
-<<<<<<< HEAD
-=======
-                        {/* Tech Stack Pills */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         <div className="flex flex-wrap gap-2 pt-2">
                           {project.technologies.map((tech, techIdx) => (
                             <span
@@ -261,10 +214,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                           ))}
                         </div>
 
-<<<<<<< HEAD
-=======
-                        {/* Action Buttons */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         <div className="pt-4 flex flex-wrap items-center gap-4">
                           <button
                             type="button"
@@ -294,10 +243,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                         </div>
                       </div>
 
-<<<<<<< HEAD
-=======
-                      {/* Right: Interactive 3D Architecture Visual (with 3D depth layer) */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                       <div className="project-visual-panel lg:col-span-5 relative">
                         <div
                           onClick={() => handleOpenCaseStudy(project)}
@@ -309,10 +254,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                             transform: 'translateZ(18px)',
                           }}
                         >
-<<<<<<< HEAD
-=======
-                          {/* Top row with mac dots & spec id */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                           <div className="flex items-center justify-between z-10">
                             <div className="flex items-center gap-1.5">
                               <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
@@ -324,10 +265,6 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                             </span>
                           </div>
 
-<<<<<<< HEAD
-=======
-                          {/* Center interactive icon & prompt */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                           <div className="my-auto flex flex-col items-center justify-center text-center space-y-3 z-10 transform group-hover/visual:scale-105 transition-transform duration-300">
                             <div className="w-20 h-20 rounded-3xl bg-surface-subtle border border-champagne/30 flex items-center justify-center shadow-gold-glow">
                               {theme.icon}
@@ -341,21 +278,11 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
                             </span>
                           </div>
 
-<<<<<<< HEAD
                           <div className="flex items-center justify-between text-[9px] font-mono text-ivory-dim z-10 border-t border-white/5 pt-3">
                             <span>TIRUMALA BALAJI VIKRAM</span>
                             <span className="text-champagne font-semibold">JAVA FULL STACK</span>
                           </div>
 
-=======
-                          {/* Bottom footer bar */}
-                          <div className="flex items-center justify-between text-[9px] font-mono text-ivory-dim z-10 border-t border-white/5 pt-3">
-                            <span>MEGA VANNAN</span>
-                            <span className="text-champagne font-semibold">AI/ML ARCHITECTURE</span>
-                          </div>
-
-                          {/* Background grid texture */}
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                           <div className="absolute inset-0 technical-grid opacity-30 pointer-events-none" />
                         </div>
                       </div>
@@ -369,8 +296,4 @@ export const Work: React.FC<WorkProps> = ({ onSelectProject }) => {
       </div>
     </section>
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
