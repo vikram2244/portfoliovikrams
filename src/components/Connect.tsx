@@ -28,9 +28,15 @@ export const Connect: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const terminalLogs = [
+<<<<<<< HEAD
     'SYSTEM_BOOT: Vikram Terminal v2.4 initialized',
     'CONNECTION: Secure TLS tunnel established',
     'CREDENTIALS: B.Tech ECE (Java Full Stack) VERIFIED',
+=======
+    'SYSTEM_BOOT: Mega Vannan Terminal v2.4 initialized',
+    'CONNECTION: Secure TLS tunnel established',
+    'CREDENTIALS: B.E. Computer Science (AI/ML) VERIFIED',
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
     'STATUS: 200 - Ready for engineering inquiries',
   ];
 
@@ -45,6 +51,10 @@ export const Connect: React.FC = () => {
     e.preventDefault();
     soundManager.playSuccess();
 
+<<<<<<< HEAD
+=======
+    // Trigger celebratory particle confetti
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
     try {
       confetti({
         particleCount: 80,
@@ -53,6 +63,10 @@ export const Connect: React.FC = () => {
         colors: ['#e5c378', '#f7edd0', '#d4af37', '#ffffff'],
       });
     } catch {
+<<<<<<< HEAD
+=======
+      // Confetti fallback
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
     }
 
     setIsSubmitted(true);
@@ -66,6 +80,10 @@ export const Connect: React.FC = () => {
       <div className="absolute inset-0 technical-grid opacity-15 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+<<<<<<< HEAD
+=======
+        {/* Section Header */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-white/10 w-fit">
             <Sparkles className="w-3.5 h-3.5 text-champagne" />
@@ -78,15 +96,30 @@ export const Connect: React.FC = () => {
             <span className="text-gradient-gold">SOMETHING EPIC.</span>
           </h2>
           <p className="font-space text-sm sm:text-base text-ivory-muted leading-relaxed pt-2">
+<<<<<<< HEAD
             Available for impactful full-stack Java roles, enterprise application development, and pragmatic engineering contracts.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+=======
+            Available for impactful full-stack roles, machine learning architectures, and pragmatic
+            engineering contracts.
+          </p>
+        </div>
+
+        {/* Content Layout with 3D Tilt Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Left: Interactive Terminal & Direct Reach */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           <div className="lg:col-span-5 flex flex-col">
             <TiltCard maxTilt={8} scale={1.015} className="h-full">
               <div className="glass-panel p-8 rounded-3xl border border-white/10 flex flex-col justify-between space-y-6 h-full shadow-xl">
                 <div className="space-y-4">
+<<<<<<< HEAD
+=======
+                  {/* Terminal Title Bar */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div className="flex items-center gap-2 text-champagne font-mono text-xs uppercase tracking-widest font-bold">
                       <Terminal className="w-4 h-4" />
@@ -98,6 +131,10 @@ export const Connect: React.FC = () => {
                     </div>
                   </div>
 
+<<<<<<< HEAD
+=======
+                  {/* Simulated Terminal Shell */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div className="p-4 rounded-2xl bg-black/60 border border-white/5 font-mono text-[11px] text-zinc-300 space-y-1.5 max-h-48 overflow-y-auto">
                     {terminalLogs.map((log, idx) => (
                       <div
@@ -116,7 +153,13 @@ export const Connect: React.FC = () => {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div className="space-y-3 pt-4 border-t border-white/10">
+=======
+                {/* Quick Contact Cards */}
+                <div className="space-y-3 pt-4 border-t border-white/10">
+                  {/* Email */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div
                     onMouseEnter={() => soundManager.playHover()}
                     className="flex items-center justify-between p-3.5 rounded-2xl bg-white/5 border border-white/5 hover:border-champagne/30 transition-colors"
@@ -148,6 +191,10 @@ export const Connect: React.FC = () => {
                     </button>
                   </div>
 
+<<<<<<< HEAD
+=======
+                  {/* Phone */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div
                     onMouseEnter={() => soundManager.playHover()}
                     className="flex items-center justify-between p-3.5 rounded-2xl bg-white/5 border border-white/5 hover:border-champagne/30 transition-colors"
@@ -179,6 +226,10 @@ export const Connect: React.FC = () => {
                     </button>
                   </div>
 
+<<<<<<< HEAD
+=======
+                  {/* LinkedIn */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                   <div
                     onMouseEnter={() => soundManager.playHover()}
                     className="flex items-center justify-between p-3.5 rounded-2xl bg-white/5 border border-white/5 hover:border-champagne/30 transition-colors"
@@ -218,6 +269,10 @@ export const Connect: React.FC = () => {
             </TiltCard>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Right: Contact Form with 3D Tilt */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           <div className="lg:col-span-7 flex flex-col">
             <TiltCard maxTilt={8} scale={1.015} className="h-full">
               <div className="glass-panel p-8 md:p-10 rounded-3xl border border-champagne/30 bg-gradient-to-br from-surface via-background-surface to-surface-subtle shadow-2xl flex flex-col justify-between h-full">
@@ -231,7 +286,11 @@ export const Connect: React.FC = () => {
                       INITIATE TRANSMISSION
                     </h3>
                     <p className="font-space text-xs text-ivory-dim">
+<<<<<<< HEAD
                       Drop a line directly regarding full-stack Java development roles or enterprise application collaborations.
+=======
+                      Drop a line directly regarding AI/ML collaborations or full-stack production roles.
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     </p>
                   </div>
 
@@ -245,7 +304,11 @@ export const Connect: React.FC = () => {
                           TRANSMISSION RECEIVED
                         </h4>
                         <p className="font-space text-sm text-ivory-dim max-w-md mx-auto">
+<<<<<<< HEAD
                           Thank you for reaching out. Vikram will respond within 24 hours.
+=======
+                          Thank you for reaching out. Mega Vannan will respond within 24 hours.
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                         </p>
                       </div>
                       <button
@@ -273,7 +336,11 @@ export const Connect: React.FC = () => {
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             onFocus={() => soundManager.playHover()}
+<<<<<<< HEAD
                             placeholder="e.g. John Doe"
+=======
+                            placeholder="e.g. Elena Rostova"
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                             className="w-full px-4 py-3 rounded-2xl bg-black/50 border border-white/10 text-white font-space text-xs focus:border-champagne focus:outline-none transition-colors"
                           />
                         </div>
@@ -288,7 +355,11 @@ export const Connect: React.FC = () => {
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             onFocus={() => soundManager.playHover()}
+<<<<<<< HEAD
                             placeholder="john@company.com"
+=======
+                            placeholder="elena@company.com"
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                             className="w-full px-4 py-3 rounded-2xl bg-black/50 border border-white/10 text-white font-space text-xs focus:border-champagne focus:outline-none transition-colors"
                           />
                         </div>
@@ -304,7 +375,11 @@ export const Connect: React.FC = () => {
                           value={formData.subject}
                           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                           onFocus={() => soundManager.playHover()}
+<<<<<<< HEAD
                           placeholder="Java Developer Role / Project Collaboration"
+=======
+                          placeholder="Project Collaboration / Role Opportunity"
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                           className="w-full px-4 py-3 rounded-2xl bg-black/50 border border-white/10 text-white font-space text-xs focus:border-champagne focus:outline-none transition-colors"
                         />
                       </div>
@@ -345,4 +420,8 @@ export const Connect: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be

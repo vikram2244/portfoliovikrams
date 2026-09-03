@@ -63,6 +63,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+<<<<<<< HEAD
+=======
+        {/* Brand / Monogram */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <button
           type="button"
           onClick={() => scrollTo('hero')}
@@ -71,6 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
           className="flex items-center gap-3 group text-left cursor-pointer"
         >
           <div className="w-10 h-10 bg-surface border border-champagne/30 rounded-2xl flex items-center justify-center font-syncopate font-bold text-gradient-gold shadow-gold-glow group-hover:scale-105 transition-transform">
+<<<<<<< HEAD
             VTB
           </div>
           <div>
@@ -80,10 +85,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
             </div>
             <span className="font-mono text-[9px] text-ivory-dim tracking-wider block uppercase">
               FULL STACK JAVA
+=======
+            MV.
+          </div>
+          <div>
+            <div className="font-syncopate text-xs md:text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
+              <span>MEGAVANNAN</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            </div>
+            <span className="font-mono text-[9px] text-ivory-dim tracking-wider block uppercase">
+              AI/ML • FULL STACK
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
             </span>
           </div>
         </button>
 
+<<<<<<< HEAD
+=======
+        {/* Desktop Navigation */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <nav className="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-[0.2em] text-ivory-dim">
           {[
             { id: 'intro', label: 'About' },
@@ -109,7 +129,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
           ))}
         </nav>
 
+<<<<<<< HEAD
         <div className="hidden md:flex items-center gap-4">
+=======
+        {/* Action Controls */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Audio Toggle */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           <button
             type="button"
             onClick={toggleAudio}
@@ -135,6 +161,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
             </span>
           </button>
 
+<<<<<<< HEAD
+=======
+          {/* Dev Connect Action */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
           <button
             type="button"
             onClick={() => {
@@ -150,6 +180,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
           </button>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Mobile menu hamburger button */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="flex md:hidden items-center gap-2">
           <button
             type="button"
@@ -178,6 +212,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Mobile Drawer Menu */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       {mobileMenuOpen && (
         <div className="md:hidden glass-panel border-b border-white/10 px-6 py-8 mt-2 mx-4 rounded-3xl animate-fade-in space-y-6 shadow-2xl">
           <div className="flex flex-col space-y-4 text-sm font-syncopate uppercase tracking-widest">
@@ -216,4 +254,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
       )}
     </header>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be

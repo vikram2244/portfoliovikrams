@@ -10,7 +10,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const SkillsUniverse: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
+<<<<<<< HEAD
   const [activeCategory, setActiveCategory] = useState('java-core');
+=======
+  const [activeCategory, setActiveCategory] = useState('ai-ml');
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
   const [hoveredSkill, setHoveredSkill] = useState<SkillItem | null>(null);
 
   const watermark1Ref = useRef<HTMLDivElement>(null);
@@ -20,11 +24,19 @@ export const SkillsUniverse: React.FC = () => {
 
   const getCategoryIcon = (id: string) => {
     switch (id) {
+<<<<<<< HEAD
       case 'java-core':
         return <BrainCircuit className="w-4 h-4" />;
       case 'full-stack':
         return <Globe className="w-4 h-4" />;
       case 'database':
+=======
+      case 'ai-ml':
+        return <BrainCircuit className="w-4 h-4" />;
+      case 'full-stack':
+        return <Globe className="w-4 h-4" />;
+      case 'backend-data':
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         return <Database className="w-4 h-4" />;
       default:
         return <Terminal className="w-4 h-4" />;
@@ -35,6 +47,10 @@ export const SkillsUniverse: React.FC = () => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
+<<<<<<< HEAD
+=======
+      // Parallax scroll on giant watermark text
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       if (watermark1Ref.current) {
         gsap.to(watermark1Ref.current, {
           x: -80,
@@ -93,27 +109,47 @@ export const SkillsUniverse: React.FC = () => {
       ref={sectionRef}
       className="relative w-full py-24 md:py-36 bg-background-DEFAULT text-ivory overflow-hidden border-t border-white/5 select-none"
     >
+<<<<<<< HEAD
+=======
+      {/* Background Giant Watermark Parallax Text */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       <div className="absolute inset-0 flex flex-col justify-around pointer-events-none opacity-[0.025] select-none aria-hidden">
         <div
           ref={watermark1Ref}
           className="font-syncopate text-[14vw] font-bold tracking-tighter whitespace-nowrap will-change-transform"
         >
+<<<<<<< HEAD
           JAVA SPRING BOOT REACT MYSQL HIBERNATE
+=======
+          PYTORCH CRNN GEMINI REACT PYTHON
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         </div>
         <div
           ref={watermark2Ref}
           className="font-syncopate text-[14vw] font-bold tracking-tighter whitespace-nowrap will-change-transform"
         >
+<<<<<<< HEAD
           REST API JWT DSA OOP MICROSERVICES
         </div>
       </div>
 
+=======
+          REST API DATABASES OOP ARCHITECTURE
+        </div>
+      </div>
+
+      {/* Floating Gold Glow Orb */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       <div
         ref={glowOrbRef}
         className="absolute top-20 right-10 w-72 h-72 bg-champagne/10 rounded-full blur-3xl pointer-events-none"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+<<<<<<< HEAD
+=======
+        {/* Section Header */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-white/10 w-fit">
             <Sparkles className="w-3.5 h-3.5 text-champagne" />
@@ -126,10 +162,19 @@ export const SkillsUniverse: React.FC = () => {
             <span className="text-gradient-gold">UNIVERSE.</span>
           </h2>
           <p className="font-space text-sm sm:text-base text-ivory-muted leading-relaxed pt-2">
+<<<<<<< HEAD
             An interactive matrix of Java enterprise development, reactive frontend engineering, and normalized data flow architectures.
           </p>
         </div>
 
+=======
+            No generic progress bars. An interactive matrix of deep learning pipelines, reactive
+            frontend engineering, and normalized data flow architectures.
+          </p>
+        </div>
+
+        {/* Category Tab Pills */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="flex flex-wrap items-center gap-3">
           {skillCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
@@ -153,6 +198,10 @@ export const SkillsUniverse: React.FC = () => {
           })}
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Category Description & Skill Cards Grid */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <div className="space-y-8">
           <p className="font-space text-xs sm:text-sm text-champagne uppercase tracking-widest font-mono">
             • {currentCategory.description}
@@ -180,6 +229,10 @@ export const SkillsUniverse: React.FC = () => {
                         : 'border-white/10 hover:border-white/25'
                     }`}
                   >
+<<<<<<< HEAD
+=======
+                    {/* Top Row: Index & Level */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[10px] text-ivory-dim tracking-wider uppercase">
                         SKILL // 0{sIdx + 1}
@@ -189,12 +242,20 @@ export const SkillsUniverse: React.FC = () => {
                       </span>
                     </div>
 
+<<<<<<< HEAD
+=======
+                    {/* Skill Name */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <div className="my-3">
                       <h3 className="font-syncopate text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-champagne transition-colors">
                         {skill.name}
                       </h3>
                     </div>
 
+<<<<<<< HEAD
+=======
+                    {/* Description Highlight */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
                     <p className="text-xs text-ivory-dim font-space leading-relaxed">
                       {skill.highlight}
                     </p>
@@ -205,6 +266,10 @@ export const SkillsUniverse: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Bottom Interactive Inspector Bar with 3D Tilt */}
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
         <TiltCard maxTilt={5} scale={1.01} className="w-full">
           <div className="glass-panel p-6 rounded-3xl border border-champagne/30 bg-gradient-to-r from-surface via-background-surface to-surface flex flex-col md:flex-row items-center justify-between gap-4 shadow-gold-glow">
             <div className="flex items-center gap-3">
@@ -227,4 +292,8 @@ export const SkillsUniverse: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be

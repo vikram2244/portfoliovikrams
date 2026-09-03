@@ -13,6 +13,13 @@ interface TiltCardProps {
   dataCursor?: string;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Ultra-performant 3D Tilt Card using Direct DOM manipulation & hardware-accelerated transforms
+ * Zero React state updates on mousemove ensures butter-smooth 120 FPS without component re-renders
+ */
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
 export const TiltCard: React.FC<TiltCardProps> = ({
   children,
   className = '',
@@ -34,6 +41,10 @@ export const TiltCard: React.FC<TiltCardProps> = ({
     }
     const card = cardRef.current;
     if (card) {
+<<<<<<< HEAD
+=======
+      // Remove any lingering transition while moving mouse for instant responsive tracking
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       card.style.transition = 'transform 0.08s ease-out';
     }
     if (glareRef.current && glare) {
@@ -56,6 +67,10 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
+<<<<<<< HEAD
+=======
+      // Calculate tilt angles
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       const tiltX = ((y - centerY) / centerY) * -maxTilt;
       const tiltY = ((x - centerX) / centerX) * maxTilt;
 
@@ -77,6 +92,10 @@ export const TiltCard: React.FC<TiltCardProps> = ({
 
     const card = cardRef.current;
     if (card) {
+<<<<<<< HEAD
+=======
+      // Smoothly return to flat resting position with easing
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
       card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
       card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     }
@@ -110,4 +129,8 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       )}
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 1e0d9bd928e0b0defb39f8de8b0330cd614822be
