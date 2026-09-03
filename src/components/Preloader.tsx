@@ -36,41 +36,41 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         isFading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
-      <div className="absolute w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
-      <div className="absolute w-80 h-80 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
+      <div className="absolute w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center max-w-sm px-6 text-center space-y-6">
-        <div className="relative flex items-center justify-center w-24 h-24 rounded-3xl bg-surface border border-champagne/30 shadow-gold-glow">
-          <span className="font-syncopate text-3xl font-bold text-gradient-gold tracking-tight">
+      <div className="relative z-10 flex flex-col items-center max-w-xs sm:max-w-sm px-4 sm:px-6 text-center space-y-4 sm:space-y-6">
+        <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl bg-surface border border-champagne/30 shadow-gold-glow">
+          <span className="font-syncopate text-2xl sm:text-3xl font-bold text-gradient-gold tracking-tight">
             VB.
           </span>
-          <div className="absolute -inset-1.5 rounded-3xl border border-champagne/20 animate-spin-slow pointer-events-none" />
+          <div className="absolute -inset-1 rounded-2xl sm:rounded-3xl border border-champagne/20 animate-spin-slow pointer-events-none" />
         </div>
 
-        <div className="space-y-1">
-          <h2 className="font-syncopate text-xs tracking-epic text-champagne uppercase font-bold">
+        <div className="space-y-0.5 sm:space-y-1">
+          <h2 className="font-syncopate text-[10px] sm:text-xs tracking-epic text-champagne uppercase font-bold">
             INITIALIZING EXPERIENCE
           </h2>
-          <p className="font-mono text-[11px] text-ivory-dim uppercase tracking-widest">
+          <p className="font-mono text-[9px] sm:text-[11px] text-ivory-dim uppercase tracking-widest">
             VIKRAM • FULL STACK JAVA DEVELOPER
           </p>
         </div>
 
-        <div className="w-64 space-y-2">
-          <div className="w-full h-1 bg-surface-subtle rounded-full overflow-hidden p-[1px]">
+        <div className="w-48 sm:w-56 md:w-64 space-y-1.5 sm:space-y-2">
+          <div className="w-full h-0.5 sm:h-1 bg-surface-subtle rounded-full overflow-hidden p-[1px]">
             <div
               className="h-full bg-gradient-to-r from-champagne via-champagne-light to-champagne rounded-full transition-all duration-100 ease-out shadow-gold-glow"
               style={{ width: `${progress}%` }}
             />
           </div>
-          <div className="flex justify-between items-center text-[10px] font-mono text-ivory-dim uppercase">
+          <div className="flex justify-between items-center text-[8px] sm:text-[10px] font-mono text-ivory-dim uppercase">
             <span>Loading</span>
             <span className="text-champagne font-semibold">{progress}%</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-[10px] font-mono text-ivory-muted">
-          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+        <div className="flex items-center gap-1.5 sm:gap-2 text-[8px] sm:text-[10px] font-mono text-ivory-muted">
+          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-ping" />
           <span>ESTABLISHING CONNECTION</span>
         </div>
       </div>

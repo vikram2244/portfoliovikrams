@@ -108,7 +108,9 @@ export const projects = [
     description: "End-to-end e-commerce web application with React.js for state management, Spring Boot RESTful services, and optimized MySQL database schema reducing data retrieval time by 50%.",
     focus: ["E-Commerce", "Full Stack", "Performance", "REST API"],
     technologies: ["React.js", "Java", "Spring Boot", "MySQL", "REST API", "JWT"],
-    githubUrl: "https://github.com/vikram2244",
+    githubUrl: "https://github.com/vikram2244/shopzen_springboot",
+    liveUrl: "https://shopgen.netlify.app",
+    imageUrl: "/assets/projects/shopgen.png",
     architectureDetails: {
       systemOverview: "High-performance e-commerce ecosystem with component-based UI rendering, secure user authentication, cart management, and optimized transactional workflows.",
       problemSolved: "Addressed slow data retrieval and inefficient query performance in e-commerce platforms through relational database schema design and SQL query tuning.",
@@ -129,24 +131,27 @@ export const projects = [
     ]
   },
   {
-    id: "airline-reservation",
+    id: "AtSpecialist",
     number: "02",
-    title: "Airline Reservation System",
-    tagline: "Console-Based Reservation with Data Structures & Algorithms",
-    description: "Console-based airline reservation system in Java implementing core DSA concepts for seat selection, booking management, and synchronized error-handling to prevent race conditions.",
-    focus: ["Java", "DSA", "OOP", "Concurrency"],
-    technologies: ["Java", "Data Structures", "Algorithms", "OOP"],
-    githubUrl: "https://github.com/vikram2244",
+    title: "AtSpecialist",
+    tagline: "E-Commerce Web Application with Optimized Backend Performance",
+    description: "End-to-end e-commerce web application with React.js for state management, Spring Boot RESTful services, and optimized MySQL database schema reducing data retrieval time by 50%.",
+    focus: ["E-Commerce", "Full Stack", "Performance", "REST API"],
+    technologies: ["React.js", "Java", "Spring Boot", "MySQL", "REST API", "JWT"],
+    githubUrl: "https://github.com/vikram2244/atspecialist_springboot",
+    liveUrl: "https://atspecialistweb.netlify.app",
+    imageUrl: "/assets/projects/atspic.png",
     architectureDetails: {
-      systemOverview: "Robust console-based reservation system with synchronized data structures ensuring conflict-free seat bookings and cancellations.",
-      problemSolved: "Prevented conflicting seat bookings and race-condition failures during concurrent access through synchronized error-handling logic.",
-      keyModules: ["Seat Selection Engine", "Booking Management System", "Cancellation Handler", "Availability Viewer"],
-      dataFlow: ["User Input Processing", "Data Structure Validation", "Conflict Detection & Resolution", "Booking Confirmation", "Availability Update"],
-      aiComponents: ["Synchronized Thread Safety Mechanisms", "Race-Condition Prevention Logic"],
+      systemOverview: "High-performance e-commerce ecosystem with component-based UI rendering, secure user authentication, cart management, and optimized transactional workflows.",
+      problemSolved: "Addressed slow data retrieval and inefficient query performance in e-commerce platforms through relational database schema design and SQL query tuning.",
+      keyModules: ["User Authentication & Authorization", "Cart Management System", "Transactional Workflow Engine", "Product Catalog Service"],
+      dataFlow: ["User Request via React Frontend", "Spring Boot REST API Gateway", "JWT Authentication & Authorization", "MySQL Database Query Optimization", "Response Rendering & State Management"],
+      aiComponents: ["JWT Token Management", "BCrypt Password Encryption", "Role-Based Access Control"],
       techStackHighlight: [
-        { name: "Java", role: "Core programming language" },
-        { name: "Data Structures", role: "Efficient seat and booking management" },
-        { name: "OOP", role: "Clean object-oriented design patterns" }
+        { name: "React.js", role: "Component-based UI with state management" },
+        { name: "Spring Boot", role: "High-performance RESTful web services" },
+        { name: "MySQL", role: "Optimized relational database with 50% faster queries" },
+        { name: "JWT", role: "Stateless authentication with refresh tokens" }
       ]
     },
     metrics: [
@@ -163,7 +168,9 @@ export const projects = [
     description: "Full-stack job portal with employer and job seeker dashboards, supporting job postings, application tracking, and resume management using Spring Boot and React.js.",
     focus: ["Job Portal", "Full Stack", "Security", "RBAC"],
     technologies: ["Java", "Spring Boot", "Spring Security", "JWT", "React.js", "MySQL"],
-    githubUrl: "https://github.com/vikram2244",
+    githubUrl: "https://github.com/vikram2244/job-portal/careersitespring",
+    liveUrl: "https://jobscareers.netlify.app",
+    imageUrl: "/assets/projects/jobscareerpic.png",
     architectureDetails: {
       systemOverview: "Secure job portal with stateless authentication, role-based access control, and hardened security against common vulnerabilities.",
       problemSolved: "Provided secure, role-specific access for employers and job seekers with protected API endpoints and encrypted authentication.",
@@ -191,8 +198,10 @@ export const projects = [
     description: "Application for storing, managing, and version-controlling AI prompts with classification, search/filtering, and collaboration features using Java Spring Boot and React.js.",
     focus: ["AI", "Content Management", "Version Control", "Collaboration"],
     technologies: ["Java", "Spring Boot", "Spring Security", "JWT", "React.js", "MySQL"],
-    githubUrl: "https://github.com/vikram2244",
-    architectureDetails: {
+    githubUrl: "https://github.com/vikram2244/promptgen",
+    liveUrl: "https://geminiaiprompts.netlify.app/",
+    imageUrl: "/assets/projects/promptgen.png",
+    architectureDetails: {  
       systemOverview: "AI prompt management platform with version control, classification, and collaborative features for prompt engineering teams.",
       problemSolved: "Enabled efficient prompt organization, version tracking, and team collaboration for AI prompt engineering workflows.",
       keyModules: ["Prompt Classification Engine", "Search & Filter Service", "Version Control System", "Collaboration Hub"],

@@ -17,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
       setIsScrolled(window.scrollY > 40);
 
       const sections = ['hero', 'intro', 'about', 'work', 'skills', 'process', 'connect'];
-      const scrollPos = window.scrollY + 220;
+      const scrollPos = window.scrollY + 180;
 
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
@@ -58,33 +58,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-3.5 bg-[#050507]/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl'
-          : 'py-6 bg-transparent'
+          ? 'py-2 sm:py-3 bg-[#050507]/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl'
+          : 'py-3 sm:py-5 lg:py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between">
         <button
           type="button"
           onClick={() => scrollTo('hero')}
           onMouseEnter={() => soundManager.playHover()}
           data-cursor="HOME"
-          className="flex items-center gap-3 group text-left cursor-pointer"
+          className="flex items-center gap-2 sm:gap-3 group text-left cursor-pointer"
         >
-          <div className="w-10 h-10 bg-surface border border-champagne/30 rounded-2xl flex items-center justify-center font-syncopate font-bold text-gradient-gold shadow-gold-glow group-hover:scale-105 transition-transform">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-surface border border-champagne/30 rounded-xl sm:rounded-2xl flex items-center justify-center font-syncopate font-bold text-gradient-gold shadow-gold-glow group-hover:scale-105 transition-transform">
             VTB
           </div>
           <div>
-            <div className="font-syncopate text-xs md:text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
+            <div className="font-syncopate text-[10px] sm:text-xs md:text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
               <span>VIKRAM</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             </div>
-            <span className="font-mono text-[9px] text-ivory-dim tracking-wider block uppercase">
+            <span className="font-mono text-[7px] sm:text-[8px] md:text-[9px] text-ivory-dim tracking-wider block uppercase">
               FULL STACK JAVA
             </span>
           </div>
         </button>
 
-        <nav className="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-[0.2em] text-ivory-dim">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-7 text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] text-ivory-dim">
           {[
             { id: 'intro', label: 'About' },
             { id: 'work', label: 'Work' },
@@ -109,28 +109,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-2 lg:gap-4">
           <button
             type="button"
             onClick={toggleAudio}
             onMouseEnter={() => soundManager.playHover()}
             data-cursor="AUDIO"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-full glass-panel border border-white/10 text-xs font-mono text-ivory-dim hover:text-champagne hover:border-champagne/40 transition-all cursor-pointer"
+            className="flex items-center gap-1.5 lg:gap-2 px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-full glass-panel border border-white/10 text-[10px] lg:text-xs font-mono text-ivory-dim hover:text-champagne hover:border-champagne/40 transition-all cursor-pointer"
             title={isMuted ? 'Enable ambient audio' : 'Mute audio'}
           >
             {isMuted ? (
-              <VolumeX className="w-3.5 h-3.5 text-zinc-500" />
+              <VolumeX className="w-3 h-3 lg:w-3.5 lg:h-3.5 text-zinc-500" />
             ) : (
               <div className="flex items-center gap-1">
-                <Volume2 className="w-3.5 h-3.5 text-champagne" />
-                <span className="flex gap-0.5 items-end h-2.5">
+                <Volume2 className="w-3 h-3 lg:w-3.5 lg:h-3.5 text-champagne" />
+                <span className="hidden lg:flex gap-0.5 items-end h-2.5">
                   <span className="w-0.5 h-1.5 bg-champagne animate-pulse" />
                   <span className="w-0.5 h-3 bg-champagne animate-pulse delay-75" />
                   <span className="w-0.5 h-2 bg-champagne animate-pulse delay-150" />
                 </span>
               </div>
             )}
-            <span className="text-[10px] tracking-wider">
+            <span className="text-[8px] lg:text-[10px] tracking-wider hidden lg:inline">
               {isMuted ? 'SOUND OFF' : 'SOUND ON'}
             </span>
           </button>
@@ -143,24 +143,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
             }}
             onMouseEnter={() => soundManager.playHover()}
             data-cursor="CONNECT"
-            className="flex items-center gap-2 px-5 py-2 rounded-full bg-champagne text-black font-syncopate text-[11px] font-bold tracking-wider hover:bg-champagne-light hover:shadow-gold-strong transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-gold-glow active:scale-95"
+            className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-5 py-1.5 lg:py-2 rounded-full bg-champagne text-black font-syncopate text-[9px] lg:text-[11px] font-bold tracking-wider hover:bg-champagne-light hover:shadow-gold-strong transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-gold-glow active:scale-95"
           >
             <span>DEV CONNECT</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-3 h-3 lg:w-3.5 lg:h-3.5" />
           </button>
         </div>
 
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={toggleAudio}
-            className="p-2.5 rounded-xl glass-panel border border-white/10 text-ivory active:scale-95"
+            className="p-2 sm:p-2.5 rounded-lg sm:rounded-xl glass-panel border border-white/10 text-ivory active:scale-95"
             aria-label="Toggle Audio"
           >
             {isMuted ? (
-              <VolumeX className="w-4 h-4 text-zinc-500" />
+              <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-500" />
             ) : (
-              <Volume2 className="w-4 h-4 text-champagne" />
+              <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-champagne" />
             )}
           </button>
 
@@ -170,17 +170,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
               soundManager.playClick();
               setMobileMenuOpen(!mobileMenuOpen);
             }}
-            className="p-2.5 rounded-xl glass-panel border border-white/10 text-ivory active:scale-95"
+            className="p-2 sm:p-2.5 rounded-lg sm:rounded-xl glass-panel border border-white/10 text-ivory active:scale-95"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-b border-white/10 px-6 py-8 mt-2 mx-4 rounded-3xl animate-fade-in space-y-6 shadow-2xl">
-          <div className="flex flex-col space-y-4 text-sm font-syncopate uppercase tracking-widest">
+        <div className="md:hidden glass-panel border-b border-white/10 px-4 sm:px-6 py-5 sm:py-8 mt-2 mx-3 sm:mx-4 rounded-2xl sm:rounded-3xl animate-fade-in space-y-4 sm:space-y-6 shadow-2xl">
+          <div className="flex flex-col space-y-3 sm:space-y-4 text-sm font-syncopate uppercase tracking-widest">
             {[
               { id: 'intro', label: 'About' },
               { id: 'work', label: 'Work' },
@@ -191,14 +191,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-left py-2 text-ivory hover:text-champagne transition-colors"
+                className="text-left py-1.5 sm:py-2 text-ivory hover:text-champagne transition-colors"
               >
                 {item.label}
               </button>
             ))}
           </div>
 
-          <div className="pt-4 border-t border-white/10">
+          <div className="pt-3 sm:pt-4 border-t border-white/10">
             <button
               type="button"
               onClick={() => {
@@ -206,10 +206,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
                 setMobileMenuOpen(false);
                 onOpenConnect();
               }}
-              className="w-full py-3.5 rounded-2xl bg-champagne text-black font-syncopate text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-gold-glow active:scale-95"
+              className="w-full py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-champagne text-black font-syncopate text-[10px] sm:text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-gold-glow active:scale-95"
             >
               <span>DEV CONNECT TERMINAL</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </div>
         </div>

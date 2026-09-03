@@ -104,7 +104,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       {glare && (
         <div
           ref={glareRef}
-          className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 z-30 overflow-hidden"
+          className="pointer-events-none absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 transition-opacity duration-300 z-30 overflow-hidden"
           aria-hidden="true"
         />
       )}

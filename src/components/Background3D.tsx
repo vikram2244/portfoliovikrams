@@ -5,6 +5,10 @@ interface Background3DProps {
   interactive?: boolean;
 }
 
+/**
+ * Lightweight, high-performance WebGL 3D Background
+ * Built with standard materials and optimized particle buffers for constant 60+ FPS
+ */
 export const Background3D: React.FC<Background3DProps> = ({ interactive = true }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -12,6 +16,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     const container = containerRef.current;
     if (!container) return;
 
+    // 1. Scene setup
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x050507, 0.0018);
 
@@ -29,11 +34,13 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
       antialias: true,
       powerPreference: 'high-performance',
     });
+    // Cap pixel ratio to 1.5 to maintain smooth 60fps on Retina displays
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x050507, 0);
     container.appendChild(renderer.domElement);
 
+    // 2. Lights - warm gold luxury illumination
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
     scene.add(ambientLight);
 
@@ -45,6 +52,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     goldLight2.position.set(100, -60, 60);
     scene.add(goldLight2);
 
+    // 3. Particle Starfield (Gold & Champagne Stardust)
     const particleCount = 180;
     const particleGeo = new THREE.BufferGeometry();
     const posArray = new Float32Array(particleCount * 3);
@@ -79,6 +87,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     const particles = new THREE.Points(particleGeo, particleMat);
     scene.add(particles);
 
+    // 4. Floating Geometric Solids (Wireframe & Metallic Polyhedra)
     const groupGeometries = new THREE.Group();
     const geometries = [
       new THREE.OctahedronGeometry(7, 0),
@@ -88,6 +97,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
       new THREE.TetrahedronGeometry(9, 0),
     ];
 
+    // High performance materials - standard rather than heavy physical transmission
     const goldWireMat = new THREE.MeshStandardMaterial({
       color: 0xe5c378,
       metalness: 0.9,
@@ -144,6 +154,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     }
     scene.add(groupGeometries);
 
+    // 5. Mouse Parallax & Scroll Parallax
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     let scrollY = window.scrollY;
 
@@ -160,6 +171,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('scroll', handleScroll, { passive: true });
 
+    // 6. Resize handler
     const handleResize = () => {
       if (!renderer || !camera) return;
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -168,12 +180,14 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
     };
     window.addEventListener('resize', handleResize);
 
+    // Pause rendering when tab is inactive to save resources
     let isTabActive = !document.hidden;
     const handleVisibilityChange = () => {
       isTabActive = !document.hidden;
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
+    // 7. Animation Loop
     let animId: number;
     const clock = new THREE.Clock();
 
@@ -183,16 +197,20 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
 
       const elapsedTime = clock.getElapsedTime();
 
+      // Smooth mouse interpolation
       mouse.x += (mouse.targetX - mouse.x) * 0.05;
       mouse.y += (mouse.targetY - mouse.y) * 0.05;
 
+      // Camera reactions
       camera.position.x = mouse.x * 16;
       camera.position.y = 10 + mouse.y * 12 - scrollY * 0.03;
       camera.lookAt(0, -scrollY * 0.03, 0);
 
+      // Rotate group gently
       groupGeometries.rotation.y = elapsedTime * 0.025 + mouse.x * 0.15;
       groupGeometries.rotation.x = mouse.y * 0.1;
 
+      // Floating meshes animation
       for (let i = 0; i < meshItems.length; i++) {
         const item = meshItems[i];
         item.mesh.rotation.x += item.rotSpeed.x;
@@ -201,6 +219,7 @@ export const Background3D: React.FC<Background3DProps> = ({ interactive = true }
         item.mesh.position.y = item.baseY + Math.sin(elapsedTime * 1.2 + i) * 6;
       }
 
+      // Drift particles with bounds
       const positions = particleGeo.attributes.position.array as Float32Array;
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;

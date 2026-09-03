@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
@@ -28,7 +23,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  // Initialize Lenis Smooth Scrolling integrated with GSAP ScrollTrigger
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -62,22 +56,16 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#050507] text-[#F5F5F7] overflow-x-hidden selection:bg-champagne/30 selection:text-champagne-light">
-      {/* Film grain subtle texture overlay */}
       <div className="film-grain" aria-hidden="true" />
 
-      {/* 3D WebGL Background Scene with floating polyhedra, particles, and lighting */}
       <Background3D interactive={true} />
 
-      {/* Trailing gold custom cursor */}
       <CustomCursor />
 
-      {/* Preloader on initial startup */}
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-      {/* Floating Glassmorphism Navbar with audio controls and navigation */}
       <Navbar onOpenConnect={handleOpenConnect} />
 
-      {/* Main Content Sections */}
       <main className="relative z-10 w-full flex flex-col">
         <Hero />
         <About />
@@ -87,10 +75,8 @@ export default function App() {
         <Connect />
       </main>
 
-      {/* Atmospheric Footer */}
       <Footer />
 
-      {/* Drill-down Project Architecture Modal */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

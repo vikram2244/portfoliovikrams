@@ -45,21 +45,21 @@ export const CustomCursor: React.FC = () => {
           label.style.display = text ? 'block' : 'none';
         }
         ring.className =
-          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-16 h-16 rounded-full bg-champagne/15 border-champagne/70 backdrop-blur-[2px] shadow-gold-glow';
+          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-14 sm:w-16 h-14 sm:h-16 rounded-full bg-champagne/15 border-champagne/70 backdrop-blur-[2px] shadow-gold-glow';
       } else if (target.closest('button, a, input, textarea, [role="button"]')) {
         if (label) {
           label.textContent = '';
           label.style.display = 'none';
         }
         ring.className =
-          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-10 h-10 rounded-full bg-champagne/10 border-champagne/50 shadow-gold-glow';
+          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-champagne/10 border-champagne/50 shadow-gold-glow';
       } else {
         if (label) {
           label.textContent = '';
           label.style.display = 'none';
         }
         ring.className =
-          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-7 h-7 rounded-full bg-transparent border-white/25';
+          'fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center transition-[width,height,border-color,background-color] duration-200 ease-out border w-5 sm:w-7 h-5 sm:h-7 rounded-full bg-transparent border-white/25';
       }
     };
 
@@ -99,12 +99,12 @@ export const CustomCursor: React.FC = () => {
 
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center border w-7 h-7 rounded-full bg-transparent border-white/25 opacity-0 transition-opacity duration-300"
+        className="fixed top-0 left-0 pointer-events-none z-[99998] flex items-center justify-center border w-5 sm:w-7 h-5 sm:h-7 rounded-full bg-transparent border-white/25 opacity-0 transition-opacity duration-300"
         style={{ transform: 'translate3d(-100px, -100px, 0)' }}
       >
         <span
           ref={labelRef}
-          className="font-mono text-[9px] font-bold text-champagne tracking-wider uppercase select-none hidden"
+          className="font-mono text-[7px] sm:text-[9px] font-bold text-champagne tracking-wider uppercase select-none hidden"
         />
       </div>
     </>
