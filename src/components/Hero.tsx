@@ -182,7 +182,7 @@ export const Hero: React.FC = () => {
                 <div
                   className="relative w-full rounded-2xl overflow-hidden bg-[#0A0A0F] border border-white/10 shadow-inner"
                   style={{
-                    aspectRatio: '3/4',
+                    aspectRatio: '4/4',
                     maxHeight: 'min(420px, 48vh)',
                   }}
                 >
@@ -247,7 +247,7 @@ export const Hero: React.FC = () => {
                 className="glass-panel px-3.5 py-2.5 rounded-xl border border-white/10 flex items-center justify-end gap-2.5 backdrop-blur-xl hover:border-champagne/40 transition-colors"
               >
                 <span className="font-mono text-[10px] text-ivory-dim uppercase tracking-widest font-semibold">
-                  SRKR // AP // 2026
+                  SRKR - AP - 2026
                 </span>
                 <span className="w-2 h-2 rounded-full bg-champagne" />
               </div>
